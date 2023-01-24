@@ -1,23 +1,21 @@
 <template>
   <div class="greetings">
     <h1 class="green">{{ title }}</h1>
-    <h2>
-      🚀👀😅⚽
-    </h2>
+    <h2>🚀👀😅⚽</h2>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 export default defineComponent({
   name: "TituloInicial",
   props: {
     title: {
-    type: String, 
-    required: true
-    }
-  }
-})
+      type: String,
+      required: true,
+    },
+  },
+});
 </script>
 
 <style scoped>
@@ -30,7 +28,7 @@ h1 {
 h2 {
   font-weight: 900;
   font-size: 1.2rem;
-  color: --vt-c-white;
+  color: var(--vt-c-white);
 }
 
 .greetings h1,

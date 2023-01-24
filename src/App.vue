@@ -11,17 +11,16 @@
 </template>
 
 <script lang="ts">
-import TituloInicial from './components/TituloInicial.vue';
-import MenuInicial from './components/MenuInicial.vue';
-import { defineComponent } from 'vue';
+import TituloInicial from "./components/TituloInicial.vue";
+import MenuInicial from "./components/MenuInicial.vue";
+import { defineComponent } from "vue";
 export default defineComponent({
   name: "App",
   components: {
-    TituloInicial, 
-    MenuInicial
-  }
-})
-
+    TituloInicial,
+    MenuInicial,
+  },
+});
 </script>
 
 <style scoped>
