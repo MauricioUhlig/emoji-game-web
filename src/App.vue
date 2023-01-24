@@ -1,44 +1,14 @@
 <template>
-  <header>
-    <div class="wrapper">
-      <TituloInicial title="Qual a sua Versão?" />
-    </div>
-  </header>
-
-  <main>
-    <MenuInicial />
-  </main>
+  <HomePage />
 </template>
 
 <script lang="ts">
-import TituloInicial from "./components/TituloInicial.vue";
-import MenuInicial from "./components/MenuInicial.vue";
+import HomePage from "./views/HomePage.vue";
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "App",
   components: {
-    TituloInicial,
-    MenuInicial,
+    HomePage,
   },
 });
 </script>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
