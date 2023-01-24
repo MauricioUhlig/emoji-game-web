@@ -15,7 +15,7 @@ export default defineComponent({
   data() {
     return {
       bgColor: "rgba(59, 157, 239, 1)",
-      txColor: "white"
+      txColor: "",
     }
   },
   methods:{

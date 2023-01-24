@@ -48,7 +48,7 @@ export default defineComponent({
 <style scoped>
     button {
         background-color: var(--bg-color);
-        color: var(--tx-color);
+        color: var(--tx-color, var(--vt-c-white));
         border-radius: 10px;
         padding: 15px;
         width: 100%;

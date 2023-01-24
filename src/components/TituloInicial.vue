@@ -30,6 +30,7 @@ h1 {
 h2 {
   font-weight: 900;
   font-size: 1.2rem;
+  color: --vt-c-white;
 }
 
 .greetings h1,
