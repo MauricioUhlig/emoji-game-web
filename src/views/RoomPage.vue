@@ -1,5 +1,23 @@
 <template>
-  <CodigoSala :codigo="codigo" />
+  <div>
+    <div class="codigo-sala">
+      <CodigoSala style="codigo-sala" :codigo="codigo" />
+    </div>
+    <div class="emoji-list">
+      <div>
+        <p class="emojis">⚽😥👀🚀</p>
+        <div class="timer">
+          <p>00:00:59</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form">
+    <div>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <button>Enviar</button>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -17,3 +35,39 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.codigo-sala {
+  display: block;
+  place-content: top;
+  margin-top: 10%;
+}
+.timer p {
+  text-align: center;
+  color: var(--timer-red);
+}
+.emojis {
+  font-size: 2rem;
+}
+.emoji-list {
+  margin-top: 50px;
+  justify-content: center;
+  display: flex;
+}
+@media (min-width: 1024px) {
+  .emoji-list {
+    height: 100%;
+    margin-top: -80px;
+    place-items: center;
+  }
+}
+
+.form {
+  display: flex;
+}
+.form textarea {
+  background-color: var(--vt-c-indigo);
+  border-radius: 13px;
+  color: white;
+}
+</style>

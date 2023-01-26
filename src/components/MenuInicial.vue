@@ -1,12 +1,18 @@
 <template>
-  <Botao
-    nome="Criar nova sala"
-    :bgColor="bgColor"
-    :txColor="txColor"
-    @aoClicar="novaSala"
-  ></Botao>
-  <Botao nome="Entrar com código" :bgColor="bgColor" :txColor="txColor"></Botao>
-  <Botao nome="Sala aleatória" :bgColor="bgColor" :txColor="txColor"></Botao>
+  <div>
+    <Botao
+      nome="Criar nova sala"
+      :bgColor="bgColor"
+      :txColor="txColor"
+      @aoClicar="novaSala"
+    ></Botao>
+    <Botao
+      nome="Entrar com código"
+      :bgColor="bgColor"
+      :txColor="txColor"
+    ></Botao>
+    <Botao nome="Sala aleatória" :bgColor="bgColor" :txColor="txColor"></Botao>
+  </div>
 </template>
 
 <script lang="ts">
