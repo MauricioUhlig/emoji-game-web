@@ -26,6 +26,7 @@ export default defineComponent({
   methods: {
     novaSala(botao: String) {
       console.log("Clicou no botão ", botao);
+      this.$router.push("/room");
     },
   },
 });

@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 import HomePage from "../views/HomePage.vue";
+import RoomPage from "../views/RoomPage.vue";
 
 const routes = [
   {
@@ -25,6 +26,15 @@ const routes = [
       ],
     },*/
   },
+  {
+    path: "/room",
+    component: RoomPage,
+    meta: {
+      requiresAuth: true,
+      is_admin: true,
+      hideFooter: true,
+    },
+  }
 ];
 
 const router = createRouter({
