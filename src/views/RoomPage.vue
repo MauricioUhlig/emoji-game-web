@@ -6,9 +6,7 @@
     <div class="emoji-list">
       <div>
         <p class="emojis">⚽😥👀🚀</p>
-        <div class="timer">
-          <p>00:00:59</p>
-        </div>
+        <TimerRegressivo :segundos="30" />
       </div>
     </div>
   </div>
@@ -23,10 +21,12 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import CodigoSala from "../components/CodigoSala.vue";
+import TimerRegressivo from "../components/TimerRegressivo.vue";
 export default defineComponent({
   name: "RoomPage",
   components: {
     CodigoSala,
+    TimerRegressivo,
   },
   data() {
     return {
@@ -42,10 +42,7 @@ export default defineComponent({
   place-content: top;
   margin-top: 10%;
 }
-.timer p {
-  text-align: center;
-  color: var(--timer-red);
-}
+
 .emojis {
   font-size: 2rem;
 }
