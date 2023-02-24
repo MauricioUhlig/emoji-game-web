@@ -6,7 +6,7 @@
     <div class="emoji-list">
       <div>
         <p class="emojis">⚽😥👀🚀</p>
-        <TimerRegressivo :segundos="30" />
+        <TimerRegressivo :segundos="30" @fim-de-tempo="fimDeTempo" />
       </div>
     </div>
   </div>
@@ -33,6 +33,11 @@ export default defineComponent({
       codigo: "sj49",
     };
   },
+  methods: {
+    fimDeTempo(){
+      alert("acabou o tempo");
+    }
+  }
 });
 </script>
 

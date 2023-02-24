@@ -19,7 +19,7 @@ export default defineComponent({
       required: false,
     },
   },
-  emits: ["aoClicar"],
+  emits: ["fimDeTempo"],
   data() {
     return {
       segundos_timer: this.segundos,
@@ -50,7 +50,10 @@ export default defineComponent({
     regressao() {
       let intervalId = setInterval(() => {
         this.segundos_timer = this.segundos_timer - 1;
-        if (this.segundos_timer === 0) clearInterval(intervalId);
+        if (this.segundos_timer === 0) {
+          clearInterval(intervalId);
+          this.$emit("fimDeTempo");
+        }
       }, 1000);
     },
   },
