@@ -6,7 +6,7 @@
     <div class="emoji-list">
       <div>
         <p class="emojis">⚽😥👀🚀</p>
-        <TimerRegressivo :segundos="30" @fim-de-tempo="fimDeTempo" />
+        <TimerRegressivo :segundos="300" @fim-de-tempo="fimDeTempo" />
       </div>
     </div>
   </div>
@@ -66,6 +66,7 @@ export default defineComponent({
 
 .form {
   display: flex;
+  align-items: center;
 }
 .form textarea {
   background-color: var(--vt-c-indigo);
