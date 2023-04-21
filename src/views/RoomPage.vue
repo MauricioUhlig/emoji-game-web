@@ -11,10 +11,7 @@
     </div>
   </div>
   <div class="form">
-    <div>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-      <button>Enviar</button>
-    </div>
+    <FraseForm nome="input" @frase-digitada="enviaFrase" />
   </div>
 </template>
 
@@ -22,11 +19,13 @@
 import { defineComponent } from "vue";
 import CodigoSala from "../components/CodigoSala.vue";
 import TimerRegressivo from "../components/TimerRegressivo.vue";
+import FraseForm from "@/components/FraseForm.vue";
 export default defineComponent({
   name: "RoomPage",
   components: {
     CodigoSala,
     TimerRegressivo,
+    FraseForm,
   },
   data() {
     return {
@@ -34,10 +33,13 @@ export default defineComponent({
     };
   },
   methods: {
-    fimDeTempo(){
+    fimDeTempo() {
       alert("acabou o tempo");
-    }
-  }
+    },
+    enviaFrase(frase: string) {
+      alert(frase);
+    },
+  },
 });
 </script>
 
@@ -67,10 +69,5 @@ export default defineComponent({
 .form {
   display: flex;
   align-items: center;
-}
-.form textarea {
-  background-color: var(--vt-c-indigo);
-  border-radius: 13px;
-  color: white;
 }
 </style>

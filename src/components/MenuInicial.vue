@@ -12,16 +12,20 @@
       :txColor="txColor"
     ></Botao>
     <Botao nome="Sala aleatória" :bgColor="bgColor" :txColor="txColor"></Botao>
+
+    <ModalForm :ativo="true" titulo="Criar nova sala" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import Botao from "./Botao.vue";
+import ModalForm from "./ModalForm.vue";
 export default defineComponent({
   name: "MenuInicial",
   components: {
     Botao,
+    ModalForm,
   },
   data() {
     return {
