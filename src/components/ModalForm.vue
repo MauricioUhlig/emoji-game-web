@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="modal" v-if="showModal">
+    <div class="modal">
       <div class="modal-content">
-        <span class="close" @click="showModal = false">&times;</span>
+        <span class="close" @click="closeModal()">&times;</span>
         <p>{{ titulo }}</p>
-        <Botao nome="teste" />
+        <slot />
       </div>
     </div>
   </div>
@@ -12,34 +12,32 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Botao from "./Botao.vue";
 export default defineComponent({
   name: "ModalForm",
   props: {
-    ativo: {
-      type: Boolean,
-      required: true,
-    },
     titulo: {
-        type: String,
-        required: false,
-    }
+      type: String,
+      required: false,
+    },
   },
-  components: {
-    Botao,
-  },
+  components: {},
+  emits: ["clickFechar"],
   data() {
     return {
       showModal: this.ativo,
     };
   },
-  methods: {},
+  methods: {
+    closeModal() {
+      this.$emit("clickFechar");
+    },
+  },
 });
 </script>
 
 <style>
 .modal {
-  display: block;
+  display: flex;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -51,11 +49,13 @@ export default defineComponent({
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: var(--color-background-soft);
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  border: 1px solid var(--color-border);
+  /*min-width: 50rem;
+  min-height: 30rem;*/
+  border-radius: 15px;
 }
 
 .close {
@@ -69,5 +69,9 @@ export default defineComponent({
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+p {
+  font-size: 20px;
+  color: var(--color-heading);
 }
 </style>

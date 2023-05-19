@@ -20,6 +20,7 @@ export default defineComponent({
     bgColor: {
       type: String,
       required: false,
+      default: "#222222",
     },
     txColor: {
       type: String,
@@ -51,7 +52,7 @@ button {
   border-radius: 10px;
   padding: 15px;
   width: 100%;
-  margin: 5px 7px;
+  margin: 5px 7px 5px 7px;
 }
 button:hover {
   background-color: var(--bg-hover-color);
